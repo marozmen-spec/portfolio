@@ -1,0 +1,75 @@
+.hero .intro h1.name{font-family:inherit;text-transform:none;white-space:normal;font-size:clamp(42px,6vw,86px);letter-spacing:-.055em;line-height:1.04;margin:0 0 22px}
+.hero-grid{min-height:0}.hero .portrait{margin-top:0;height:clamp(340px,48vw,640px)}
+.number-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.case-method{font-size:14px;margin:20px 0 0}.case-method dt{color:#e2ebc6;font-weight:700}.case-method dd{margin:3px 0 12px;color:#cbd4bf}
+.network-backdrop canvas{opacity:.45}
+@media(max-width:600px){.number-grid{grid-template-columns:1fr}.hero .portrait{height:auto}}
+
+/* Approved single portrait and text-led secondary sections. */
+.expertise-heading{grid-template-columns:minmax(0,1fr);gap:0}
+.contact{grid-template-columns:minmax(0,1fr);padding-bottom:50px}
+.contact>p{max-width:760px}
+.contact-details{margin-bottom:0}
+.hero .portrait>img:not(.spatial-mark){object-fit:contain;object-position:center bottom}
+@media(max-width:600px){.contact{padding-bottom:36px}}
+
+/* Professional process illustrations */
+.expertise-card{background:linear-gradient(145deg,#232c20,#191f17);border-color:#75856355;min-height:0;overflow:hidden;padding:26px;box-shadow:0 16px 32px #0002;position:relative}
+.expertise-card .expertise-diagram{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;margin:18px 0 24px;border-radius:8px;box-shadow:0 10px 24px #0003}
+.expertise-card .card-index{position:absolute;top:15px;left:26px;font-size:10px;opacity:.6}
+.expertise-card h3{margin:0 0 10px;font-size:22px;line-height:1.3}
+.expertise-card p{margin:0;line-height:1.6}
+.expertise-card:hover{transform:translateY(-3px);border-color:#a3b18a}
+@media(max-width:600px){.expertise-card{padding:22px}.expertise-card h3{font-size:21px}.expertise-card .expertise-diagram{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){.expertise-card:hover{transform:none}}
+
+/* Quiet data graphics and a feathered photographic light. */
+.number-grid .metric-front{position:relative;background:linear-gradient(145deg,#2a3425,#1b2318);border-radius:14px;box-shadow:inset 0 1px #d6dfbd12,0 12px 26px #0002}
+.number-grid .metric-diagram{position:absolute;right:18px;top:16px;width:44%;max-width:150px;height:76px;object-fit:contain;opacity:.65;pointer-events:none}
+.number-grid .metric-static .metric-copy{margin-top:78px;z-index:1}
+.numbers .grand-orbit{display:none}
+.hero .portrait::before{content:'';position:absolute;inset:3% -3% 5% -3%;width:auto;height:auto;aspect-ratio:auto;border:0;border-radius:0;transform:none;background:radial-gradient(ellipse at 48% 42%,rgba(189,195,162,.16) 0%,rgba(139,153,111,.09) 36%,rgba(21,23,18,0) 68%);box-shadow:none;filter:blur(18px);pointer-events:none;z-index:-1}
+.hero .portrait>img:not(.spatial-mark){filter:drop-shadow(0 14px 22px #0003)}
+@media(max-width:600px){.number-grid .metric-diagram{width:40%;max-width:135px}.hero .portrait::before{inset:0 -2% 6%;filter:blur(12px)}}
+
+.number-grid .metric-detail{margin:12px 0 0;color:#cbd4bf;font-size:14px;line-height:1.5}
+
+.job .career-period{margin:16px 0 4px;font-size:13px;color:#b7c3a3}
+
+@media (max-width: 600px) {
+  .number-grid .metric-static,
+  .number-grid .metric-front { height: auto; }
+  .number-grid .metric-copy,
+  .job > div,
+  .contact-details > a { min-width: 0; }
+  .number-grid .metric-copy strong,
+  .job h4,
+  .contact-details > a { overflow-wrap: anywhere; }
+  .job .career-period { margin-top: 20px; }
+  .contact-details > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .actions {
+    display: grid;
+    gap: 10px;
+    max-width: 360px;
+  }
+  .hero .actions > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    text-align: center;
+  }
+  .hero .actions > .text-link {
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 8px 12px;
+  }
+}

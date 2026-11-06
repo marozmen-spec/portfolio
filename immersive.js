@@ -1,4 +1,4 @@
-const symbols=[['document',''],['growth',''],['people',''],['building',''],['handshake',''],['globe',''],['target','']];
+const metricDiagrams=['transactions','partners','regions'];
 function model(type){
  const primitives={
  document:'<i class="sheet s1"></i><i class="sheet s2"></i><i class="sheet s3"><b>✓</b></i>',
@@ -14,9 +14,9 @@ function model(type){
  experience:'<i class="message-bubble bubble-back"></i><i class="message-bubble bubble-front"><b>•••</b></i>'};
  return `<span class="object-stage ${type}" aria-hidden="true"><span class="object-world">${primitives[type]||primitives.document}</span><span class="object-shadow"></span></span>`;
 }
-document.querySelectorAll('.number-grid>div').forEach((card,i)=>{const original=card.innerHTML;card.classList.add('metric-sculpture');card.innerHTML=`<div class="metric-static"><div class="metric-front">${model(symbols[i][0])}<div class="metric-copy">${original}</div></div></div>`;});
-const types=['implementation','handshake','experience','learning','growth','collaboration'];
-document.querySelectorAll('.expertise-card').forEach((card,i)=>{card.querySelector('.skill-object')?.remove();card.insertAdjacentHTML('afterbegin',model(types[i]));});
+document.querySelectorAll('.number-grid>div').forEach((card,i)=>{const original=card.innerHTML;card.classList.add('metric-sculpture');card.innerHTML=`<div class="metric-static"><div class="metric-front"><img class="metric-diagram" src="assets/metrics/${metricDiagrams[i]}.svg" alt="" aria-hidden="true"><div class="metric-copy">${original}</div></div></div>`;});
+const diagrams=['implementation','network','experience','learning','analytics','collaboration'];
+document.querySelectorAll('.expertise-card').forEach((card,i)=>{card.querySelector('.skill-object')?.remove();card.insertAdjacentHTML('afterbegin', '<img class="expertise-diagram" src="assets/expertise/'+diagrams[i]+'.svg" alt="" aria-hidden="true" loading="lazy">');});
 const numbers=document.querySelector('.numbers');numbers.insertAdjacentHTML('afterbegin','<div class="numbers-scenery" aria-hidden="true"><i class="grand-orbit a"></i><i class="grand-orbit b"></i><i class="grand-orbit c"></i><div class="horizon-grid"></div></div>');
 document.querySelector('.hero').insertAdjacentHTML('afterbegin','<div class="hero-depth" aria-hidden="true"><i></i><i></i><i></i></div>');
 document.querySelector('.cases').insertAdjacentHTML('afterbegin',`<div class="case-sculpture">${model('growth')}</div>`);

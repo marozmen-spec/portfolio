@@ -1,0 +1,13 @@
+#case-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+.result-case{position:relative;display:flex;flex-direction:column;padding:clamp(22px,3vw,42px);border-radius:24px;border:1px solid #b9c99a42;background:radial-gradient(ellipse at 95% 0%,#85996430,transparent 60%),linear-gradient(145deg,#303a29,#1a2317);box-shadow:inset 0 1px #e1e8cd22,0 18px 30px #0003}
+.result-index{font-size:10px;letter-spacing:.19em;color:#b9c5a8}
+.result-case h3{font-size:clamp(17px,2vw,24px);font-weight:500;line-height:1.3;margin:12px 0 20px}
+.result-case strong{font-size:clamp(26px,4vw,54px);line-height:1.08;letter-spacing:-.035em;color:#e2ebc6;font-weight:600}
+.result-case p{font-size:14px;line-height:1.6;color:#cbd4bf;margin:15px 0 0}
+.hero-depth{display:none}
+.portrait::before{background:radial-gradient(circle at 38% 34%,#879b69,#4b5b3b 65%,#263423);box-shadow:0 0 0 18px #a6bd7913,0 0 0 42px #a6bd790a,0 30px 70px #0005}
+.numbers .grand-orbit{opacity:.22}
+.metric-static{height:auto;min-height:190px}.metric-static .metric-front{height:auto;min-height:190px;overflow:hidden;justify-content:end;background:linear-gradient(145deg,#3b4935,#1a2317)}
+.number-grid .metric-static .object-stage{position:absolute;right:-14px;top:-12px;opacity:.35;transform:scale(.72);transform-origin:top right;margin:0}
+.metric-static .metric-copy{position:relative;margin-top:70px}
+@media(max-width:650px){#case-list{grid-template-columns:1fr}.metric-static,.metric-static .metric-front{min-height:175px}.number-grid .metric-static .object-stage{transform:scale(.56)}}
